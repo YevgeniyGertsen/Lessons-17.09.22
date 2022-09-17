@@ -38,4 +38,70 @@ namespace Task2
         }
 
     }
+
+    public interface ITrans
+    {
+        string CarType { get; set; }
+        int CarWeight { get; set; }
+        int MaxWeight { get; set; }
+
+        void GetTransInfo();
+        string WeightInfo();
+        double WeightParam();       
+    }
+
+    public interface ITransMethos
+    {
+        void PrintInfo();
+        void CalculetaCost();
+    }
+
+    public interface ITransAdditionalParam
+    {
+        string VinCode { get; set; }
+        string Color { get; set; }
+        bool IsAirplane { get; set; }
+    }
+
+    public class Transport : ITrans, ITransMethos, ITransAdditionalParam
+    {
+        //-1 interface
+        public string CarType { get; set; }
+        public int CarWeight { get; set; }
+        public int MaxWeight { get; set; }
+
+        public void GetTransInfo()
+        {
+           
+        }
+
+        public string WeightInfo()
+        {
+            return "";
+        }
+
+        public double WeightParam()
+        {
+            return 0;
+        }
+
+        //-2 inetrfeca
+        public void PrintInfo()
+        {
+
+        }
+        public void CalculetaCost()
+        {
+
+        }
+
+        //- 3 interface
+        public string VinCode { get; set; }
+        public string Color { get; set; }
+        public bool IsAirplane { get; set; }
+
+        //add prop
+        public int Cost { get; set; }
+        public string TransportCode { get; set; }
+    }
 }

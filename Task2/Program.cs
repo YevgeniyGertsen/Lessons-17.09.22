@@ -24,6 +24,21 @@ namespace Task2
     {
         static void Main(string[] args)
         {
+
+            Transport transport = new Transport();
+            transport.CarType = "";
+            transport.CarWeight = 0;
+            transport.MaxWeight = 0;
+            //add
+            transport.Cost = 0;
+            transport.TransportCode = "";
+
+            ITrans trans = new Transport();
+            trans.CarType = "";
+            trans.CarWeight = 0;
+            trans.MaxWeight = 0;
+
+
             Random rnd = new Random();
             CarRandom carRandom = new CarRandom();
 
